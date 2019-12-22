@@ -165,9 +165,10 @@ class VkMusAppGUI(Frame):
 			self.makeDir()
 
 	def delCache(self):
-		for fileName in os.listdir(cacheFileName):
-			path = os.path.join(cacheFileName, fileName)
-			os.remove(path)
+		if os.path.exists(cacheFileName):
+			for fileName in os.listdir(cacheFileName):
+				path = os.path.join(cacheFileName, fileName)
+				os.remove(path)
 		self.quit()
 
 	def makeThread(self, func, args):
