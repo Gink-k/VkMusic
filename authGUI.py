@@ -44,6 +44,9 @@ class AuthGUI(Frame):
 		
 		self.canvas = canvas
 		
+		####
+		#self.result.append(1)
+		####
 		btn = Button(canvas,
 					 text='Войти',
 					 width=6,
@@ -51,7 +54,9 @@ class AuthGUI(Frame):
 					 bg='#5181B8',
 					 fg='white',
 					 command=self.performThreadAct)
-												
+												#self.login.get(), 
+												#	self.password.get(), 
+												#			self.result))
 		btn.pack(side='bottom', pady=45)
 		canvas.create_window(150, 300, window=btn)
 		
